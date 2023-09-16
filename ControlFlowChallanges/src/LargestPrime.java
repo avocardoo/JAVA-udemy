@@ -11,6 +11,6 @@ public class LargestPrime {
     }
 
     public static void main(String[] args) {
-        System.out.println(getLargestPrime(21));
+        System.out.println(getLargestPrime(313));
     }
 }
