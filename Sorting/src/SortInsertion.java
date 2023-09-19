@@ -1,0 +1,23 @@
+import java.util.Arrays;
+
+public class SortInsertion {
+    public static void main(String[] args) {
+        int[] arr = {41, 25, -89, 25, 32, -8, 23, -41, 32, 20};
+        sortSelection(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+    static void swap(int[] arr, int first, int second) {
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
+    }
+    static void sortSelection(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i+1; j > 0; j--) {
+                if (arr[j] < arr[j-1]) {
+                    swap(arr, j, j-1);
+                } else break;
+            }
+        }
+    }
+}
